@@ -51,7 +51,7 @@
       <div class="form-group">
         <label>Bots</label>
         <textarea name="botInput"
-          data-ng-pattern="/^(([a-zA-Z0-9])+,{1}[D|A]{1},{1}(([0-9]{1}|10),{1}){7}([0-9]{1}|10)[^\S\r\n]?)*$/"
+          data-ng-pattern="/^(([a-zA-Z0-9])+[^\S\r\n]?([a-zA-Z0-9])+,{1}[D|A]{1},{1}(([0-9]{1}|10),{1}){7}([0-9]{1}|10)[^\S\r\n]?)*$/"
           class="form-control"
           cols="45" 
           data-ng-model="botInput">
