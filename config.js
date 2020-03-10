@@ -8,11 +8,13 @@ assigmentModule.controller('castlesController',function($scope){
     $scope.terrainInput = '';
     $scope.valleys = 0;
     $scope.peaks = 0;
+    $scope.castles = 0;
 
     $scope.processData = () => {
         //reset
         $scope.valleys = 0;
         $scope.peaks = 0;
+        $scope.castles = 0;
         let terrain = '';
 
         try {
@@ -42,6 +44,10 @@ assigmentModule.controller('castlesController',function($scope){
                 $scope.peaks++;
             }
         }
+
+        $scope.castles = $scope.valleys + $scope.peaks;
+        if ( data.length >= 2) $scope.castles += 2;
+        if ( data.length === 1 && !isNaN(data[0])) $scope.castles += 1;
     }
 
     let isValley = (index, terrain) => {
