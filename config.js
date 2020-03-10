@@ -103,11 +103,11 @@ let processData = () => {
     let arr = [];
 
     if($scope.botInput){
-        arr = $scope.botInput.split(' ');
+        arr = $scope.botInput.split('\n');
         for(let item of arr){
             bots.push(new Bot(...item.split(',')));
         }
-    }  
+    }
 };
 
 $scope.getSurvivingLoosers = () => {

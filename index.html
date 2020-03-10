@@ -51,13 +51,13 @@
       <div class="form-group">
         <label>Bots</label>
         <textarea name="botInput"
-          data-ng-pattern="/^(([a-zA-Z0-9])+[^\S\r\n]?([a-zA-Z0-9])+,{1}[D|A]{1},{1}(([0-9]{1}|10),{1}){7}([0-9]{1}|10)[^\S\r\n]?)*$/"
+          data-ng-pattern="/^(([a-zA-Z0-9\s])+,{1}[D|A]{1},{1}(([0-9]{1}|10),{1}){7}([0-9]{1}|10)\n?)*$/"
           class="form-control"
           cols="45" 
           data-ng-model="botInput">
         </textarea>
         <p class="text-danger" data-ng-if="transformersForm.$invalid && transformersForm.botInput.$dirty">
-          Please make sure it is in the right format i.e. Optimus Prime,A,1,2,10,4,5,6,7,9 and separate bots by one space, line breaks not allowed.
+          Please make sure it is in the right format i.e. Optimus Prime,A,1,2,10,4,5,6,7,9 and separate bots by a line breaks.
         </p>     
       </div>
 
