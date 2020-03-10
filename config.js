@@ -117,7 +117,7 @@ $scope.getSurvivingLoosers = () => {
     });
 }
 
-const _OPTIMUS = "obtimus prime";
+const _OPTIMUS = "optimus prime";
 const _PREDAKING = "predaking";
 const _DECEPTICONS = "D";
 const _AUTOBOT = "A";
